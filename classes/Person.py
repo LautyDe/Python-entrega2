@@ -1,5 +1,5 @@
 class Person():
-    def __init__(self, _id, name, age, products):
+    def __init__(self, _id, name, age):
         self._id = _id
         self.name = name
         self.age = age
@@ -9,7 +9,7 @@ class Person():
         return f'My id is {self._id} and this is my cart {self.products}'
     
     def __len__(self):
-        return f'I have {len(self.products)}'
+        return len(self.products)
 
     def add_to_cart(self, product):
         self.products.append(product)
@@ -20,3 +20,4 @@ class Person():
     def buy(self):
       print("Purchase successful!")
       self.products = []
+
